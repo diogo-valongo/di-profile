@@ -1,11 +1,47 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Meu Portfólio">
+	<main>
+		<section class="section">
+			<div class="container text-center">
+				<h1 style="font-size: 3rem; margin-bottom: 1.5rem; background: linear-gradient(to right, var(--primary), var(--secondary)); -webkit-background-clip: text; color: transparent;">
+					Olá, eu sou [Seu Nome]
+				</h1>
+				<p style="font-size: 1.25rem; color: #d1d5db; margin-bottom: 2rem;">
+					Desenvolvedor Web Full Stack | Criador de experiências digitais únicas
+				</p>
+				<div style="display: flex; gap: 1rem; justify-content: center;">
+					<a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+					<a href="#contato" class="btn btn-secondary">Contato</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="projetos" class="section">
+			<div class="container">
+				<h2 style="font-size: 2rem; text-align: center; margin-bottom: 3rem;">Meus Projetos</h2>
+				<div class="grid">
+					<!-- Adicione seus projetos aqui -->
+				</div>
+			</div>
+		</section>
+
+		<section id="contato" class="section">
+			<div class="container">
+				<h2 style="font-size: 2rem; text-align: center; margin-bottom: 3rem;">Entre em Contato</h2>
+				<div style="max-width: 32rem; margin: 0 auto;">
+					<div style="display: flex; gap: 1.5rem; justify-content: center;">
+						<a href="https://github.com/seu-usuario" style="color: #d1d5db; text-decoration: none; transition: color 0.3s;">GitHub</a>
+						<a href="https://linkedin.com/in/seu-usuario" style="color: #d1d5db; text-decoration: none; transition: color 0.3s;">LinkedIn</a>
+						<a href="mailto:seu-email@exemplo.com" style="color: #d1d5db; text-decoration: none; transition: color 0.3s;">Email</a>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 </Layout>
