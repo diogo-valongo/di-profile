@@ -9,6 +9,6 @@
   }
   
   body {
-    @apply bg-gray-900 text-white;
+    @apply bg-dark-900 text-primary-100;
   }
 } 
