@@ -10,128 +10,50 @@ import awsBadge from '../assets/aws-certified-cloud-practitioner.png';
 
 <Layout title="Meu Portfólio">
 	<!-- Barra de Navegação -->
-	<nav class="fixed top-0 left-0 right-0 bg-dark-900/80 backdrop-blur-sm z-50 py-4 shadow-lg">
-		<div class="container mx-auto px-4">
-			<div class="flex justify-center items-center gap-4 flex-wrap">
-				<a href="#inicio" 
-					class="text-primary-300 hover:text-primary-100 px-4 py-2 rounded-lg transition-colors duration-300 hover:bg-dark-800">
-					Início
-				</a>
-				<a href="#jornada" 
-					class="text-primary-300 hover:text-primary-100 px-4 py-2 rounded-lg transition-colors duration-300 hover:bg-dark-800">
-					Jornada
-				</a>
-				<a href="#certificacoes" 
-					class="text-primary-300 hover:text-primary-100 px-4 py-2 rounded-lg transition-colors duration-300 hover:bg-dark-800">
-					Certificações AWS
-				</a>
-				<a href="#outras-certificacoes" 
-					class="text-primary-300 hover:text-primary-100 px-4 py-2 rounded-lg transition-colors duration-300 hover:bg-dark-800">
-					Outras Certificações
-				</a>
-			</div>
-		</div>
-	</nav>
+	<!-- Removido: <nav ... </nav> -->
 
 	<main class="min-h-screen bg-gradient-to-b from-dark-900 to-dark-800 pt-20">
 		<section id="inicio" class="py-20 pt-32">
 			<div class="container mx-auto px-4">
-				<div class="max-w-4xl mx-auto text-center">
-					<h1 class="text-5xl font-bold mb-6 bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent leading-relaxed pb-2">
-						Olá, eu sou Diogo Valongo
-					</h1>
-					
-					<!-- Container da Imagem -->
-					<div class="mb-8 flex justify-center">
-						<div class="relative w-48 h-48 rounded-full overflow-hidden ring-4 ring-primary-500/50 shadow-lg shadow-primary-500/20">
-							<Image 
-								src={profileImage} 
-								alt="Diogo Valongo"
-								width={192}
-								height={192}
-								class="w-full h-full object-cover"
-							/>
-						</div>
-					</div>
-
-					<p class="text-xl text-primary-200 mb-8">
-						Desenvolvedor AI | Entusiasta de Cloud Computing | Engenheiro de Software
-					</p>
-					<div class="flex justify-center gap-4">
-						<a href="#projetos" 
-							class="bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-lg transition-colors duration-300">
-							Ver Projetos
-						</a>
-						<a href="#contato" 
-							class="bg-secondary-500 hover:bg-secondary-600 text-dark-900 px-6 py-3 rounded-lg transition-colors duration-300">
-							Contato
-						</a>
+				<div class="flex flex-col items-center justify-center" style="min-height: 220px;">
+					<div id="terminal-intro" class="w-full max-w-6xl md:w-4/5 lg:w-3/4 xl:w-2/3 bg-dark-800/70 border border-dark-700 rounded-lg p-8 shadow-lg font-mono text-2xl md:text-3xl text-primary-100 mx-auto">
+						<span id="terminal-text"></span><span id="terminal-cursor" class="text-secondary-500">|</span>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Nova seção de Timeline -->
-		<section id="jornada" class="py-20 relative">
+		<!-- Seção Projetos -->
+		<section id="projetos" class="py-20">
 			<div class="container mx-auto px-4">
-				<h2 class="text-3xl font-bold text-center mb-16 text-primary-100">Minha Jornada</h2>
-				
-				<!-- Timeline Container -->
-				<div class="max-w-4xl mx-auto relative">
-					<!-- Linha vertical central -->
-					<div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary-700"></div>
+				<h2 class="text-3xl font-bold text-center mb-12 text-primary-100">Meus Projetos</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<a href="/projetos/projeto-1" class="block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500">
+						<h3 class="text-xl font-semibold mb-3 text-primary-100">Projeto 1</h3>
+						<p class="text-primary-200 mb-4">Descrição do projeto vai aqui. Explique brevemente o que você fez.</p>
+						<div class="flex gap-2 mb-4">
+							<span class="bg-primary-500/20 text-primary-300 text-sm px-3 py-1 rounded-full">React</span>
+							<span class="bg-secondary-500/20 text-secondary-300 text-sm px-3 py-1 rounded-full">Node.js</span>
+						</div>
+					</a>
 
-					<!-- 2020 - UFF -->
-					<div class="mb-16 relative">
-						<div class="flex items-center justify-center mb-4">
-							<div class="bg-primary-500 text-white px-4 py-1 rounded-full z-10">2020</div>
+					<a href="/projetos/projeto-2" class="block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500">
+						<h3 class="text-xl font-semibold mb-3 text-primary-100">Projeto 2</h3>
+						<p class="text-primary-200 mb-4">Descrição do projeto vai aqui. Explique brevemente o que você fez.</p>
+						<div class="flex gap-2 mb-4">
+							<span class="bg-primary-500/20 text-primary-300 text-sm px-3 py-1 rounded-full">Python</span>
+							<span class="bg-secondary-500/20 text-secondary-300 text-sm px-3 py-1 rounded-full">AI</span>
 						</div>
-						<div class="bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 ml-4 md:ml-0 md:w-1/2 relative">
-							<div class="absolute top-1/2 -translate-y-1/2 -left-12 w-12 h-1 bg-primary-700 md:block hidden"></div>
-							<h3 class="text-xl font-semibold mb-2 text-primary-400">Início na UFF</h3>
-							<p class="text-primary-200">Ingresso no curso de Engenharia de Computação na Universidade Federal Fluminense (UFF).</p>
-						</div>
-					</div>
+					</a>
 
-					<!-- 2023 - Primeiro Estágio -->
-					<div class="mb-16 relative">
-						<div class="flex items-center justify-center mb-4">
-							<div class="bg-primary-500 text-white px-4 py-1 rounded-full z-10">2023</div>
+					<a href="/projetos/projeto-3" class="block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500">
+						<h3 class="text-xl font-semibold mb-3 text-primary-100">Projeto 3</h3>
+						<p class="text-primary-200 mb-4">Descrição do projeto vai aqui. Explique brevemente o que você fez.</p>
+						<div class="flex gap-2 mb-4">
+							<span class="bg-primary-500/20 text-primary-300 text-sm px-3 py-1 rounded-full">AWS</span>
+							<span class="bg-secondary-500/20 text-secondary-300 text-sm px-3 py-1 rounded-full">Cloud</span>
 						</div>
-						<div class="bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 mr-4 md:mr-0 md:w-1/2 md:ml-auto relative">
-							<div class="absolute top-1/2 -translate-y-1/2 -right-12 w-12 h-1 bg-primary-700 md:block hidden"></div>
-							<h3 class="text-xl font-semibold mb-2 text-primary-400">Primeiro Estágio</h3>
-							<p class="text-primary-200">Início da jornada profissional com foco em desenvolvimento de software e soluções tecnológicas.</p>
-						</div>
-					</div>
-
-					<!-- 2025 - AWS e Novo Estágio -->
-					<div class="mb-16 relative">
-						<div class="flex items-center justify-center mb-4">
-							<div class="bg-primary-500 text-white px-4 py-1 rounded-full z-10">2025</div>
-						</div>
-						<div class="bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 ml-4 md:ml-0 md:w-1/2 relative">
-							<div class="absolute top-1/2 -translate-y-1/2 -left-12 w-12 h-1 bg-primary-700 md:block hidden"></div>
-							<h3 class="text-xl font-semibold mb-2 text-primary-400">Certificação AWS & Novo Estágio</h3>
-							<p class="text-primary-200">Conquista da certificação AWS Cloud Practitioner e início de um novo estágio focado em cloud computing e desenvolvimento.</p>
-							<div class="flex gap-2 mt-3">
-								<span class="bg-secondary-500/20 text-secondary-300 text-sm px-3 py-1 rounded-full">AWS Certified</span>
-								<span class="bg-primary-500/20 text-primary-300 text-sm px-3 py-1 rounded-full">Cloud Computing</span>
-							</div>
-						</div>
-					</div>
-
-					<!-- Futuro - Próximos Passos -->
-					<div class="relative">
-						<div class="flex items-center justify-center mb-4">
-							<div class="bg-secondary-500 text-dark-900 px-4 py-1 rounded-full z-10">Próximos Passos</div>
-						</div>
-						<div class="bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 mr-4 md:mr-0 md:w-1/2 md:ml-auto relative">
-							<div class="absolute top-1/2 -translate-y-1/2 -right-12 w-12 h-1 bg-primary-700 md:block hidden"></div>
-							<h3 class="text-xl font-semibold mb-2 text-secondary-400">Continuando a Evoluir</h3>
-							<p class="text-primary-200">Buscando novas certificações e oportunidades para crescer como desenvolvedor e engenheiro de software.</p>
-						</div>
-					</div>
+					</a>
 				</div>
 			</div>
 		</section>
@@ -185,9 +107,15 @@ import awsBadge from '../assets/aws-certified-cloud-practitioner.png';
 		<section id="outras-certificacoes" class="py-20">
 			<div class="container mx-auto px-4">
 				<h2 class="text-3xl font-bold text-center mb-12 text-primary-100">Outras Certificações</h2>
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+				<!-- UI de busca -->
+				<div class="flex flex-col items-center mb-8">
+					<input id="cert-search" type="text" placeholder="Pesquisar certificações ou tags..." class="w-full max-w-md px-4 py-2 rounded-lg bg-dark-800 border border-dark-700 text-primary-100 focus:outline-none focus:ring-2 focus:ring-secondary-500 placeholder:text-primary-300" />
+				</div>
+
+				<div id="cert-cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
 					<!-- Certificação 1 -->
-					<div class="bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800/70 transition-colors duration-300">
+					<div class="cert-card bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800/70 transition-colors duration-300" data-tags="python backend desenvolvimento">
 						<div class="h-12 mb-4 flex items-center justify-center">
 							<svg class="w-10 h-10 text-primary-500" fill="currentColor" viewBox="0 0 24 24">
 								<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
@@ -195,6 +123,11 @@ import awsBadge from '../assets/aws-certified-cloud-practitioner.png';
 						</div>
 						<h3 class="text-xl font-semibold mb-2 text-center text-primary-100">Python Professional</h3>
 						<p class="text-primary-300 text-center mb-4">Certificação em desenvolvimento Python avançado</p>
+						<div class="flex flex-wrap justify-center gap-2 mb-4">
+							<span class="tag bg-primary-500/20 text-primary-300 text-xs px-3 py-1 rounded-full">Python</span>
+							<span class="tag bg-secondary-500/20 text-secondary-300 text-xs px-3 py-1 rounded-full">Backend</span>
+							<span class="tag bg-secondary-500/20 text-secondary-300 text-xs px-3 py-1 rounded-full">Desenvolvimento</span>
+						</div>
 						<div class="flex justify-center">
 							<a href="#" class="text-primary-400 hover:text-primary-300 transition-colors duration-300 text-sm">
 								Ver credencial
@@ -203,7 +136,7 @@ import awsBadge from '../assets/aws-certified-cloud-practitioner.png';
 					</div>
 
 					<!-- Certificação 2 -->
-					<div class="bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800/70 transition-colors duration-300">
+					<div class="cert-card bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800/70 transition-colors duration-300" data-tags="data science análise dados">
 						<div class="h-12 mb-4 flex items-center justify-center">
 							<svg class="w-10 h-10 text-secondary-500" fill="currentColor" viewBox="0 0 24 24">
 								<path d="M20 3H4a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zm-1 16H5V5h14v14z"></path>
@@ -212,6 +145,11 @@ import awsBadge from '../assets/aws-certified-cloud-practitioner.png';
 						</div>
 						<h3 class="text-xl font-semibold mb-2 text-center text-primary-100">Data Science Fundamentals</h3>
 						<p class="text-primary-300 text-center mb-4">Especialização em análise e ciência de dados</p>
+						<div class="flex flex-wrap justify-center gap-2 mb-4">
+							<span class="tag bg-secondary-500/20 text-secondary-300 text-xs px-3 py-1 rounded-full">Data Science</span>
+							<span class="tag bg-primary-500/20 text-primary-300 text-xs px-3 py-1 rounded-full">Análise</span>
+							<span class="tag bg-primary-500/20 text-primary-300 text-xs px-3 py-1 rounded-full">Dados</span>
+						</div>
 						<div class="flex justify-center">
 							<a href="#" class="text-secondary-400 hover:text-secondary-300 transition-colors duration-300 text-sm">
 								Ver credencial
@@ -220,7 +158,7 @@ import awsBadge from '../assets/aws-certified-cloud-practitioner.png';
 					</div>
 
 					<!-- Certificação 3 -->
-					<div class="bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800/70 transition-colors duration-300">
+					<div class="cert-card bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800/70 transition-colors duration-300" data-tags="machine learning ia inteligência artificial">
 						<div class="h-12 mb-4 flex items-center justify-center">
 							<svg class="w-10 h-10 text-primary-400" fill="currentColor" viewBox="0 0 24 24">
 								<path d="M21 2H3a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zm-1 18H4V4h16v16z"></path>
@@ -229,44 +167,15 @@ import awsBadge from '../assets/aws-certified-cloud-practitioner.png';
 						</div>
 						<h3 class="text-xl font-semibold mb-2 text-center text-primary-100">Machine Learning Specialist</h3>
 						<p class="text-primary-300 text-center mb-4">Certificação em IA e aprendizado de máquina</p>
+						<div class="flex flex-wrap justify-center gap-2 mb-4">
+							<span class="tag bg-primary-500/20 text-primary-300 text-xs px-3 py-1 rounded-full">Machine Learning</span>
+							<span class="tag bg-secondary-500/20 text-secondary-300 text-xs px-3 py-1 rounded-full">IA</span>
+							<span class="tag bg-secondary-500/20 text-secondary-300 text-xs px-3 py-1 rounded-full">Inteligência Artificial</span>
+						</div>
 						<div class="flex justify-center">
 							<a href="#" class="text-primary-400 hover:text-primary-300 transition-colors duration-300 text-sm">
 								Ver credencial
 							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section id="projetos" class="py-20">
-			<div class="container mx-auto px-4">
-				<h2 class="text-3xl font-bold text-center mb-12 text-primary-100">Meus Projetos</h2>
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-					<div class="bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300">
-						<h3 class="text-xl font-semibold mb-3 text-primary-100">Projeto 1</h3>
-						<p class="text-primary-200 mb-4">Descrição do projeto vai aqui. Explique brevemente o que você fez.</p>
-						<div class="flex gap-2">
-							<span class="bg-primary-500/20 text-primary-300 text-sm px-3 py-1 rounded-full">React</span>
-							<span class="bg-secondary-500/20 text-secondary-300 text-sm px-3 py-1 rounded-full">Node.js</span>
-						</div>
-					</div>
-
-					<div class="bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300">
-						<h3 class="text-xl font-semibold mb-3 text-primary-100">Projeto 2</h3>
-						<p class="text-primary-200 mb-4">Descrição do projeto vai aqui. Explique brevemente o que você fez.</p>
-						<div class="flex gap-2">
-							<span class="bg-primary-500/20 text-primary-300 text-sm px-3 py-1 rounded-full">Python</span>
-							<span class="bg-secondary-500/20 text-secondary-300 text-sm px-3 py-1 rounded-full">AI</span>
-						</div>
-					</div>
-
-					<div class="bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300">
-						<h3 class="text-xl font-semibold mb-3 text-primary-100">Projeto 3</h3>
-						<p class="text-primary-200 mb-4">Descrição do projeto vai aqui. Explique brevemente o que você fez.</p>
-						<div class="flex gap-2">
-							<span class="bg-primary-500/20 text-primary-300 text-sm px-3 py-1 rounded-full">AWS</span>
-							<span class="bg-secondary-500/20 text-secondary-300 text-sm px-3 py-1 rounded-full">Cloud</span>
 						</div>
 					</div>
 				</div>
@@ -302,6 +211,81 @@ import awsBadge from '../assets/aws-certified-cloud-practitioner.png';
 		</section>
 	</main>
 </Layout>
+
+<script is:inline>
+const text1 = "Seja bem vindo ao portfólio de";
+const nome = "Diogo Valongo";
+const nomeColor = 'text-secondary-500';
+const text2 = `Caso você procure um desenvolvedor atualizado, que estuda IA e Cloud por paixão, acostumado a trabalhar em equipe e em diversos tipos de projetos e temas, dê uma olhada nos meus projetos ou certificações. Não hesite em me contatar via <a href=\"https://www.linkedin.com/in/diogo-valongo/\" class=\"text-secondary-500 underline hover:text-secondary-400 transition-colors\" target=\"_blank\">LinkedIn</a> ou <a href=\"mailto:diovalongo@gmail.com\" class=\"text-secondary-500 underline hover:text-secondary-400 transition-colors\">e-mail</a> e me siga no <a href=\"https://github.com/diogo-valongo\" class=\"text-secondary-500 underline hover:text-secondary-400 transition-colors\" target=\"_blank\">Github</a>!`;
+const cursor = document.getElementById('terminal-cursor');
+const terminalText = document.getElementById('terminal-text');
+
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+async function typeTerminal() {
+  // Escreve a saudação
+  for (let i = 0; i < text1.length; i++) {
+    terminalText.textContent = text1.slice(0, i+1);
+    await sleep(40);
+  }
+  // Nome destacado em nova linha
+  await sleep(300);
+  const span = document.createElement('span');
+  span.className = nomeColor + ' text-2xl md:text-4xl font-bold';
+  let nomeTyped = '';
+  for (let i = 0; i < nome.length; i++) {
+    nomeTyped += nome[i];
+    span.textContent = nomeTyped;
+    terminalText.innerHTML = text1 + '<br><br>' + span.outerHTML;
+    await sleep(70);
+  }
+  // Espera antes de digitar o texto profissional
+  await sleep(1200);
+  // Digita o texto profissional em nova linha (sem links durante a digitação)
+  let textoProf = '';
+  const text2SemLinks = "Caso você procure um desenvolvedor atualizado, que estuda IA e Cloud por paixão, acostumado a trabalhar em equipe e em diversos tipos de projetos e temas, dê uma olhada nos meus projetos ou certificações. Não hesite em me contatar via LinkedIn ou e-mail e me siga no Github!";
+  for (let i = 0; i < text2SemLinks.length; i++) {
+    textoProf += text2SemLinks[i];
+    terminalText.innerHTML = text1 + '<br><br>' + span.outerHTML + '<br><br>' + textoProf;
+    await sleep(22);
+  }
+  // Ao final, substitui LinkedIn, e-mail e Github por links
+  terminalText.innerHTML = text1 + '<br><br>' + span.outerHTML + '<br><br>' + text2;
+  // Mantém o cursor piscando
+  setInterval(() => {
+    cursor.style.visibility = cursor.style.visibility === 'hidden' ? 'visible' : 'hidden';
+  }, 500);
+}
+typeTerminal();
+
+const searchInput = document.getElementById('cert-search');
+const cards = document.querySelectorAll('.cert-card');
+searchInput.addEventListener('input', function() {
+  const value = this.value.toLowerCase();
+  cards.forEach(card => {
+    const tags = card.getAttribute('data-tags');
+    const text = card.textContent.toLowerCase();
+    if (text.includes(value) || tags.includes(value)) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+});
+</script>
+
+<style is:inline>
+#terminal-intro {
+  min-height: 120px;
+  box-shadow: 0 4px 32px 0 rgba(40,60,100,0.10);
+}
+#terminal-cursor {
+  animation: blink 1s steps(2, start) infinite;
+}
+@keyframes blink {
+  to { visibility: hidden; }
+}
+</style>
 
 <style>
 	html {
