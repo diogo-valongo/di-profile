@@ -14,7 +14,7 @@ import Layout from '../../layouts/Layout.astro';
         <p class="text-primary-200 mb-8">
           Este projeto foi desenvolvido em grupo durante um estágio e teve como objetivo a construção de um chatbot jurídico no Telegram, utilizando uma abordagem de <b class="text-secondary-500">RAG (Retrieval-Augmented Generation)</b> com base em um dataset cuidadosamente selecionado.<br/><br/>
           O dataset consistia exclusivamente em documentos utilizados em processos jurídicos brasileiros, como acórdãos de embargos, recursos extraordinários, recursos recorrentes, entre outros. Esses textos são altamente técnicos e escritos em linguagem jurídica especializada, o que os torna pouco acessíveis a pessoas sem formação na área. Assim, o chatbot foi projetado para atuar como um intermediador entre o conteúdo jurídico e o usuário comum, traduzindo e explicando os documentos de forma clara e acessível.<br/><br/>
-          A aplicação foi construída utilizando exclusivamente ferramentas da <b class="text-secondary-500">AWS</b>, conforme exigido pelo estágio. A infraestrutura foi provisionada com <b class="text-secondary-500">Terraform</b>, adotando o conceito de <b class="text-secondary-500">Infrastructure as Code (IaC)</b>. Toda a solução foi hospedada em uma única instância <b class="text-secondary-500">EC2</b>, devido a limitações orçamentárias e à ausência de demanda real por escalabilidade. Por isso, tecnologias como <b class="text-secondary-500">Auto Scaling</b> e <b class="text-secondary-500">Elastic Load Balancing (ELB)</b> não foram utilizadas.<br/><br/>
+          A aplicação foi construída utilizando exclusivamente ferramentas da <b class="text-secondary-500">AWS</b>, conforme exigido pelo estágio. O bot foi desenvolvido em <b class="text-secondary-500">Python</b> e a infraestrutura foi provisionada com <b class="text-secondary-500">Terraform</b>, adotando o conceito de <b class="text-secondary-500">Infrastructure as Code (IaC)</b>. Toda a solução foi hospedada em uma única instância <b class="text-secondary-500">EC2</b>, devido a limitações orçamentárias e à ausência de demanda real por escalabilidade. Por isso, tecnologias como <b class="text-secondary-500">Auto Scaling</b> e <b class="text-secondary-500">Elastic Load Balancing (ELB)</b> não foram utilizadas.<br/><br/>
           Dentro da instância EC2, a arquitetura foi containerizada com <b class="text-secondary-500">Docker</b>, incluindo:
           <ul class="list-disc ml-8 my-2 text-primary-300">
             <li>O serviço do chatbot.</li>
@@ -32,17 +32,18 @@ import Layout from '../../layouts/Layout.astro';
             Caso tenha interesse em conhecer mais sobre a arquitetura, decisões técnicas ou a divisão de responsabilidades do grupo, estou disponível para conversas individuais.
           </p>
           <div class="flex gap-2 mb-8 flex-wrap mt-8">
-            <span class="bg-primary-500/30 text-primary-100 text-sm px-3 py-1 rounded-full">AWS</span>
-            <span class="bg-secondary-500/30 text-secondary-100 text-sm px-3 py-1 rounded-full">EC2</span>
-            <span class="bg-primary-400/20 text-primary-200 text-sm px-3 py-1 rounded-full">RAG</span>
-            <span class="bg-secondary-400/20 text-secondary-200 text-sm px-3 py-1 rounded-full">Bedrock</span>
-            <span class="bg-primary-700/20 text-primary-300 text-sm px-3 py-1 rounded-full">Telegram</span>
-            <span class="bg-secondary-700/20 text-secondary-300 text-sm px-3 py-1 rounded-full">Docker</span>
-            <span class="bg-secondary-700/20 text-secondary-300 text-sm px-3 py-1 rounded-full">NGINX</span>
-            <span class="bg-primary-900/20 text-primary-400 text-sm px-3 py-1 rounded-full">ChromaDB</span>
-            <span class="bg-secondary-500/20 text-secondary-300 text-sm px-3 py-1 rounded-full">Infra as Code</span>
-            <span class="bg-primary-500/20 text-primary-300 text-sm px-3 py-1 rounded-full">Grupo</span>
-            <span class="bg-secondary-500/20 text-secondary-300 text-sm px-3 py-1 rounded-full">Jurídico</span>
+            <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">AWS</span>
+            <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">EC2</span>
+            <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">RAG</span>
+            <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">Bedrock</span>
+            <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">Telegram</span>
+            <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">Python</span>
+            <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">Docker</span>
+            <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">NGINX</span>
+            <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">ChromaDB</span>
+            <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">Infra as Code</span>
+            <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">Grupo</span>
+            <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">Jurídico</span>
           </div>
         </p>
         <a href="/" class="text-secondary-400 hover:underline">← Voltar para o portfólio</a>
