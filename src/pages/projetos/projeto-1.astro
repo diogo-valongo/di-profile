@@ -1,16 +1,50 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 ---
-<Layout title="Projeto 1 | Meu Portfólio">
+<a href="/" class="fixed top-6 left-6 z-50 text-secondary-500 hover:text-secondary-300 transition-colors duration-200" title="Voltar">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+  </svg>
+</a>
+<Layout title="ChatBot Jurídico com RAG e AWS | Meu Portfólio">
   <main class="min-h-screen bg-gradient-to-b from-dark-900 to-dark-800 pt-20">
     <section class="py-20">
       <div class="container mx-auto px-4 max-w-3xl">
-        <h1 class="text-4xl font-bold mb-6 text-primary-100">Projeto 1</h1>
-        <p class="text-primary-200 mb-8">Descrição detalhada do Projeto 1. Explique o objetivo, tecnologias utilizadas, desafios e resultados.</p>
-        <div class="flex gap-2 mb-8">
-          <span class="bg-primary-500/20 text-primary-300 text-sm px-3 py-1 rounded-full">React</span>
-          <span class="bg-secondary-500/20 text-secondary-300 text-sm px-3 py-1 rounded-full">Node.js</span>
-        </div>
+        <h1 class="text-4xl font-bold mb-6 text-primary-100">ChatBot Jurídico com RAG e AWS</h1>
+        <p class="text-primary-200 mb-8">
+          Este projeto foi desenvolvido em grupo durante um estágio e teve como objetivo a construção de um chatbot jurídico no Telegram, utilizando uma abordagem de <b class="text-secondary-500">RAG (Retrieval-Augmented Generation)</b> com base em um dataset cuidadosamente selecionado.<br/><br/>
+          O dataset consistia exclusivamente em documentos utilizados em processos jurídicos brasileiros, como acórdãos de embargos, recursos extraordinários, recursos recorrentes, entre outros. Esses textos são altamente técnicos e escritos em linguagem jurídica especializada, o que os torna pouco acessíveis a pessoas sem formação na área. Assim, o chatbot foi projetado para atuar como um intermediador entre o conteúdo jurídico e o usuário comum, traduzindo e explicando os documentos de forma clara e acessível.<br/><br/>
+          A aplicação foi construída utilizando exclusivamente ferramentas da <b class="text-secondary-500">AWS</b>, conforme exigido pelo estágio. A infraestrutura foi provisionada com <b class="text-secondary-500">Terraform</b>, adotando o conceito de <b class="text-secondary-500">Infrastructure as Code (IaC)</b>. Toda a solução foi hospedada em uma única instância <b class="text-secondary-500">EC2</b>, devido a limitações orçamentárias e à ausência de demanda real por escalabilidade. Por isso, tecnologias como <b class="text-secondary-500">Auto Scaling</b> e <b class="text-secondary-500">Elastic Load Balancing (ELB)</b> não foram utilizadas.<br/><br/>
+          Dentro da instância EC2, a arquitetura foi containerizada com <b class="text-secondary-500">Docker</b>, incluindo:
+          <ul class="list-disc ml-8 my-2 text-primary-300">
+            <li>O serviço do chatbot.</li>
+            <li>Um banco vetorial (<b class="text-secondary-500">ChromaDB</b>) para armazenamento dos embeddings.</li>
+            <li>Um servidor <b class="text-secondary-500">NGINX</b> atuando como camada de proxy reverso.</li>
+          </ul>
+          Os modelos de linguagem utilizados foram disponibilizados pela <b class="text-secondary-500">Amazon Bedrock</b>:<br/>
+          <b>Embeddings:</b> <code class="bg-dark-800 text-primary-100 px-2 py-1 rounded">amazon.titan-embed-text-v2:0</code><br/>
+          <b>Geração de respostas e análise de contexto:</b> <code class="bg-dark-800 text-primary-100 px-2 py-1 rounded">amazon.nova-micro-v1:0</code><br/><br/>
+          A escolha do <code class="bg-dark-800 text-primary-100 px-2 py-1 rounded">nova-micro-v1:0</code> se deu por seu bom desempenho em testes e, especialmente, por ser um modelo treinado em português, o que o tornava ideal para lidar com a complexidade e os termos do domínio jurídico brasileiro.<br/><br/>
+          <span class="block border-l-4 border-secondary-500 pl-4 ml-8 mt-6 mb-8 text-secondary-300 bg-dark-800/40 italic">
+            <b>Observação:</b> O projeto atualmente não está funcional, pois a conta <b class="text-secondary-500">AWS</b> que sustentava a infraestrutura foi encerrada. Além disso, o código-fonte permanece privado, a pedido da <b class="text-secondary-500">Compass UOL</b>, empresa que utilizou o projeto como parte de um processo avaliativo.
+          </span>
+          <p class="mt-8 text-primary-200">
+            Caso tenha interesse em conhecer mais sobre a arquitetura, decisões técnicas ou a divisão de responsabilidades do grupo, estou disponível para conversas individuais.
+          </p>
+          <div class="flex gap-2 mb-8 flex-wrap mt-8">
+            <span class="bg-primary-500/30 text-primary-100 text-sm px-3 py-1 rounded-full">AWS</span>
+            <span class="bg-secondary-500/30 text-secondary-100 text-sm px-3 py-1 rounded-full">EC2</span>
+            <span class="bg-primary-400/20 text-primary-200 text-sm px-3 py-1 rounded-full">RAG</span>
+            <span class="bg-secondary-400/20 text-secondary-200 text-sm px-3 py-1 rounded-full">Bedrock</span>
+            <span class="bg-primary-700/20 text-primary-300 text-sm px-3 py-1 rounded-full">Telegram</span>
+            <span class="bg-secondary-700/20 text-secondary-300 text-sm px-3 py-1 rounded-full">Docker</span>
+            <span class="bg-secondary-700/20 text-secondary-300 text-sm px-3 py-1 rounded-full">NGINX</span>
+            <span class="bg-primary-900/20 text-primary-400 text-sm px-3 py-1 rounded-full">ChromaDB</span>
+            <span class="bg-secondary-500/20 text-secondary-300 text-sm px-3 py-1 rounded-full">Infra as Code</span>
+            <span class="bg-primary-500/20 text-primary-300 text-sm px-3 py-1 rounded-full">Grupo</span>
+            <span class="bg-secondary-500/20 text-secondary-300 text-sm px-3 py-1 rounded-full">Jurídico</span>
+          </div>
+        </p>
         <a href="/" class="text-secondary-400 hover:underline">← Voltar para o portfólio</a>
       </div>
     </section>
