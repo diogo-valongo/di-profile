@@ -5,7 +5,6 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://diogo-valongo.github.io',
-  base: 'di-profile',
   integrations: [
     tailwind({
       // Configuração do Tailwind
