@@ -1,20 +1,57 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import awsArch from '../../assets/aws.drawio.png';
 ---
 <a href="/" class="fixed top-6 left-6 z-50 text-secondary-500 hover:text-secondary-300 transition-colors duration-200" title="Voltar">
   <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
     <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
   </svg>
 </a>
-<Layout title="Projeto 2 | Meu Portfólio">
+<Layout title="API de OCR para Notas Fiscais | Meu Portfólio">
   <main class="min-h-screen bg-gradient-to-b from-dark-900 to-dark-800 pt-20">
     <section class="py-20">
       <div class="container mx-auto px-4 max-w-3xl">
-        <h1 class="text-4xl font-bold mb-6 text-primary-100">Projeto 2</h1>
-        <p class="text-primary-200 mb-8">Descrição detalhada do Projeto 2. Explique o objetivo, tecnologias utilizadas, desafios e resultados.</p>
-        <div class="flex gap-2 mb-8">
-          <span class="bg-primary-500/20 text-primary-300 text-sm px-3 py-1 rounded-full">Python</span>
-          <span class="bg-secondary-500/20 text-secondary-300 text-sm px-3 py-1 rounded-full">AI</span>
+        <h1 class="text-4xl font-bold mb-6 text-primary-100">API de OCR para Notas Fiscais</h1>
+        <p class="text-primary-200 mb-8">
+          Este projeto foi desenvolvido durante meu estágio na Compass UOL e tem como objetivo automatizar a extração de informações relevantes de notas fiscais por meio de uma <b class="text-secondary-500">API REST</b>. A solução, desenvolvida em <b class="text-secondary-500">Python</b>, recebe imagens de notas fiscais, realiza a extração dos dados utilizando <b class="text-secondary-500">OCR do Amazon Textract</b> e aplica técnicas de <b class="text-secondary-500">NLP</b> para tratar e estruturar os campos extraídos, retornando-os em formato <b class="text-secondary-500">JSON</b>.<br/><br/>
+          O desenvolvimento foi realizado em equipe (4 pessoas), com colaboração ativa e compartilhamento de conhecimento entre todos os membros, garantindo domínio sobre todas as etapas do projeto.<br/><br/>
+          Diferentemente do <a href="/projetos/projeto-1" class="text-secondary-500 underline hover:text-secondary-400 transition-colors">projeto do ChatBot</a>, neste optamos por provisionar manualmente todos os recursos na <b class="text-secondary-500">AWS</b>, pois ainda não havíamos sido apresentados ao <b class="text-secondary-500">Terraform</b> ou outras ferramentas de <b class="text-secondary-500">IaC</b>.<br/><br/>
+          <b>Principais tecnologias e serviços utilizados:</b>
+          <ul class="list-disc ml-8 my-2 text-primary-300">
+            <li><b class="text-secondary-500">API Gateway</b>: expõe a API REST e encaminha as requisições para a Lambda.</li>
+            <li><b class="text-secondary-500">AWS Lambda</b>: processa as requisições, realiza chamadas ao Textract e manipula os dados extraídos.</li>
+            <li><b class="text-secondary-500">Amazon Textract</b>: serviço de OCR utilizado para extrair dados das notas fiscais.</li>
+            <li><b class="text-secondary-500">Amazon S3</b>: armazena as imagens das notas fiscais enviadas pelos usuários.</li>
+            <li><b class="text-secondary-500">Amazon CloudWatch</b>: monitora, gera logs e alertas sobre a execução do sistema.</li>
+            <li><b class="text-secondary-500">AWS Step Functions</b>: orquestra o fluxo de processamento dos dados extraídos.</li>
+          </ul>
+        </p>
+        <div class="p-4 mb-8 flex flex-col items-center">
+          <img src={awsArch.src} alt="Arquitetura do Projeto AWS OCR" class="rounded-lg shadow-md border-2 border-primary-500 max-w-full" style="max-height: 400px; object-fit: contain;" />
+          <span class="text-primary-300 text-sm mt-2 italic">Arquitetura da solução na AWS</span>
+        </div>
+        <p class="text-primary-200 mb-8">
+          A solução apresentou ótimo desempenho, conseguindo extrair a maioria dos campos relevantes das notas fiscais, mesmo diante de diferentes layouts e qualidades de imagem.<br/><br/>
+          <span class="block border-l-4 border-secondary-500 pl-4 ml-8 mt-6 mb-8 text-secondary-300 bg-dark-800/40 italic">
+            <b>Observação:</b> O projeto não está atualmente deployado, pois a conta AWS utilizada foi encerrada. O código-fonte permanece privado a pedido da Compass UOL, que utilizou o projeto como parte de um processo avaliativo.
+          </span>
+        </p>
+        <p class="mt-8 text-primary-200">
+          Caso tenha interesse em saber mais sobre a arquitetura, decisões técnicas ou detalhes do desenvolvimento, estou à disposição para conversar!
+        </p>
+        <div class="flex gap-2 mb-8 flex-wrap mt-8">
+          <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">AWS</span>
+          <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">API Gateway</span>
+          <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">Lambda</span>
+          <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">Textract</span>
+          <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">S3</span>
+          <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">CloudWatch</span>
+          <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">Step Functions</span>
+          <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">OCR</span>
+          <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">NLP</span>
+          <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">REST</span>
+          <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">JSON</span>
+          <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">Python</span>
         </div>
         <a href="/" class="text-secondary-400 hover:underline">← Voltar para o portfólio</a>
       </div>
