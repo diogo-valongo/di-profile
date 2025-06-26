@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<a href="/" class="fixed top-6 left-6 z-50 text-secondary-500 hover:text-secondary-300 transition-colors duration-200" title="Voltar">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+  </svg>
+</a>
+<Layout title="Leitor de RSS em Docker na AWS | Meu Portfólio">
+  <main class="min-h-screen bg-gradient-to-b from-dark-900 to-dark-800 pt-20">
+    <section class="py-20">
+      <div class="container mx-auto px-4 max-w-3xl">
+        <h1 class="text-4xl font-bold mb-6 text-primary-100">Leitor de RSS em Docker na AWS</h1>
+        <p class="text-primary-200 mb-8">
+          Este projeto foi desenvolvido durante meu estágio na Compass UOL, com o objetivo de construir um <b class="text-secondary-500">leitor de RSS</b> containerizado em <b class="text-secondary-500">Docker</b> e hospedado na <b class="text-secondary-500">AWS</b>.<br/><br/>
+          O desenvolvimento foi realizado em equipe (4 pessoas) ao longo de 4 semanas, utilizando <b class="text-secondary-500">Node.js</b> para implementar o leitor de RSS.<br/><br/>
+          Após a construção do leitor, criamos um <b class="text-secondary-500">Dockerfile</b> e subimos o projeto em uma instância <b class="text-secondary-500">EC2</b>. Nessa EC2, uma <b class="text-secondary-500">API</b> foi disponibilizada com rotas para:
+          <ul class="list-disc ml-8 my-2 text-primary-300">
+            <li><b class="text-secondary-500">Obter o feed RSS</b> como resposta</li>
+            <li><b class="text-secondary-500">Upload de feeds</b> para a EC2</li>
+            <li><b class="text-secondary-500">Documentação das rotas</b> via <b class="text-secondary-500">Swagger UI</b></li>
+          </ul>
+          Além disso, um <b class="text-secondary-500">site estático</b> foi hospedado em um <b class="text-secondary-500">S3</b> para consumir a rota de obtenção do feed da API, criando uma página simples de notícias.<br/><br/>
+        </p>
+        <p class="text-primary-200 mb-8">
+          <span class="block border-l-4 border-secondary-500 pl-4 ml-8 mt-6 mb-8 text-secondary-300 bg-dark-800/40 italic">
+            <b>Observação:</b> O projeto não está atualmente deployado, pois a conta AWS utilizada foi encerrada. O código-fonte permanece privado a pedido da Compass UOL, que utilizou o projeto como parte de um processo avaliativo.
+          </span>
+        </p>
+        <p class="mt-8 text-primary-200">
+          Caso tenha interesse em saber mais sobre a arquitetura, decisões técnicas ou detalhes do desenvolvimento, estou à disposição para conversar!
+        </p>
+        <div class="flex gap-2 mb-8 flex-wrap mt-8">
+          <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">Node.js</span>
+          <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">Docker</span>
+          <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">AWS</span>
+          <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">EC2</span>
+          <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">S3</span>
+          <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">API</span>
+          <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">Swagger UI</span>
+          <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">RSS</span>
+          <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">Notícias</span>
+          <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">Equipe</span>
+        </div>
+        <a href="/" class="text-secondary-400 hover:underline">← Voltar para o portfólio</a>
+      </div>
+    </section>
+  </main>
+</Layout> 

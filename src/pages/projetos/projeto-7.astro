@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<a href="/" class="fixed top-6 left-6 z-50 text-secondary-500 hover:text-secondary-300 transition-colors duration-200" title="Voltar">
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+  </svg>
+</a>
+<Layout title="Automação de Postagens em Redes Sociais | Meu Portfólio">
+  <main class="min-h-screen bg-gradient-to-b from-dark-900 to-dark-800 pt-20">
+    <section class="py-20">
+      <div class="container mx-auto px-4 max-w-3xl">
+        <h1 class="text-4xl font-bold mb-6 text-primary-100">Automação de Postagens em Redes Sociais</h1>
+        <p class="text-primary-200 mb-8">
+          Este é um projeto pessoal desenvolvido para facilitar a rotina de um grupo de amigos, automatizando postagens de vídeos em diferentes redes sociais.<br/><br/>
+          O sistema foi escrito em <b class="text-secondary-500">Python</b> utilizando <b class="text-secondary-500">Selenium</b>, com o objetivo de realizar postagens automáticas em múltiplas plataformas.<br/><br/>
+          Devido à dinamicidade das redes sociais, o programa exige manutenção constante, o que infelizmente não é sempre possível de ser realizado. Além disso, muitas empresas restringem ou dificultam o uso de automações via Selenium para controlar contas de usuários.<br/><br/>
+          Em determinado momento, o projeto esteve funcional, conseguindo realizar postagens automáticas. Foram feitas tentativas de uso das <b class="text-secondary-500">APIs oficiais</b> das redes sociais, com sucesso apenas na integração com o <b class="text-secondary-500">YouTube</b>. As APIs do TikTok, X (antigo Twitter) e Instagram apresentaram burocracias ou documentação insuficiente, tornando o processo mais complexo do que o esperado.<br/><br/>
+          Por isso, a solução principal seguiu com Selenium, apesar das limitações já mencionadas. Acredito que, com testes automatizados e dedicação de um ou mais desenvolvedores, o projeto pode atingir seu potencial e cumprir sua proposta.<br/><br/>
+          Desenvolver este sistema foi uma experiência enriquecedora, mesmo sem conseguir utilizá-lo plenamente para resolver o problema inicial.<br/><br/>
+        </p>
+        <p class="text-primary-200 mb-8">
+          <span class="block border-l-4 border-secondary-500 pl-4 ml-8 mt-6 mb-8 text-secondary-300 bg-dark-800/40 italic">
+            <b>Observação:</b> O projeto não está atualmente funcional devido às constantes mudanças nas plataformas e restrições de automação. Caso tenha interesse em saber mais sobre a arquitetura, desafios técnicos ou detalhes do desenvolvimento, estou à disposição para conversar!
+          </span>
+        </p>
+        <div class="flex gap-2 mb-8 flex-wrap mt-8">
+          <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">Python</span>
+          <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">Selenium</span>
+          <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">APIs</span>
+          <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">YouTube</span>
+          <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">TikTok</span>
+          <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">Instagram</span>
+          <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">X (Twitter)</span>
+          <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">Automação</span>
+          <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">Testes</span>
+          <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">Postagens</span>
+        </div>
+        <a href="/" class="text-secondary-400 hover:underline">← Voltar para o portfólio</a>
+      </div>
+    </section>
+  </main>
+</Layout> 
