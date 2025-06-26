@@ -32,7 +32,7 @@ import awsBadge from '../assets/aws-certified-cloud-practitioner.png';
 					<input id="projetos-search" type="text" placeholder="Pesquisar projetos ou tags..." class="w-full max-w-md px-4 py-2 rounded-lg bg-dark-800 border border-dark-700 text-primary-100 focus:outline-none focus:ring-2 focus:ring-secondary-500 placeholder:text-primary-300" />
 				</div>
 				<div id="projetos-cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-					<a href="/projetos/projeto-1" class="projeto-card block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500" data-tags="aws ec2 rag bedrock telegram python docker juridico chatbot">
+					<a href={`${import.meta.env.BASE_URL}/projetos/projeto-1`} class="projeto-card block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500" data-tags="aws ec2 rag bedrock telegram python docker juridico chatbot">
 						<h3 class="text-xl font-semibold mb-3 text-primary-100">ChatBot Jurídico com RAG e AWS</h3>
 						<p class="text-primary-200 mb-4">Chatbot jurídico no Telegram, usando RAG, AWS Bedrock, EC2, Docker, Python e NGINX para traduzir e explicar documentos jurídicos brasileiros.</p>
 						<div class="flex gap-2 mb-4 flex-wrap">
@@ -47,7 +47,7 @@ import awsBadge from '../assets/aws-certified-cloud-practitioner.png';
 						</div>
 					</a>
 
-					<a href="/projetos/projeto-2" class="projeto-card block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500" data-tags="aws api gateway lambda textract ocr nlp rest notas fiscais python">
+					<a href={`${import.meta.env.BASE_URL}/projetos/projeto-2`} class="projeto-card block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500" data-tags="aws api gateway lambda textract ocr nlp rest notas fiscais python">
 						<h3 class="text-xl font-semibold mb-3 text-primary-100">API de OCR para Notas Fiscais</h3>
 						<p class="text-primary-200 mb-4">API REST que processa notas fiscais com OCR do Textract, utilizando NLP para extrair dados e retornar campos importantes em JSON.</p>
 						<div class="flex gap-2 mb-4 flex-wrap">
@@ -62,7 +62,7 @@ import awsBadge from '../assets/aws-certified-cloud-practitioner.png';
 						</div>
 					</a>
 
-					<a href="/projetos/projeto-3" class="projeto-card block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500" data-tags="astro tailwind javascript github pages ia sleep token portfolio">
+					<a href={`${import.meta.env.BASE_URL}/projetos/projeto-3`} class="projeto-card block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500" data-tags="astro tailwind javascript github pages ia sleep token portfolio">
 						<h3 class="text-xl font-semibold mb-3 text-primary-100">Portfólio Pessoal</h3>
 						<p class="text-primary-200 mb-4">Site criado para documentar certificações e projetos, conectar com a comunidade dev e apresentar meu perfil profissional. Feito com Astro, Tailwind, JS e deploy no GitHub Pages.</p>
 						<div class="flex gap-2 mb-4 flex-wrap">
@@ -75,7 +75,7 @@ import awsBadge from '../assets/aws-certified-cloud-practitioner.png';
 						</div>
 					</a>
 
-					<a href="/projetos/projeto-4" class="projeto-card block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500" data-tags="pygame python game jam djuff 2025 roguelike minesweeper fake news">
+					<a href={`${import.meta.env.BASE_URL}/projetos/projeto-4`} class="projeto-card block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500" data-tags="pygame python game jam djuff 2025 roguelike minesweeper fake news">
 						<h3 class="text-xl font-semibold mb-3 text-primary-100">Presssweeper - Game Jam DJUFF 2025</h3>
 						<p class="text-primary-200 mb-4">Jogo desenvolvido em equipe para a Game Jam DJUFF 2025, misturando Minesweeper com combate à desinformação. Feito em Python com PyGame.</p>
 						<div class="flex gap-2 mb-4 flex-wrap">
@@ -89,7 +89,7 @@ import awsBadge from '../assets/aws-certified-cloud-practitioner.png';
 						</div>
 					</a>
 				
-					<a href="/projetos/projeto-5" class="projeto-card block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500" data-tags="java maven web scrum ci/cd testes trello csv pdf graficos budget relatorios engenharia de software financeiro controle gastos">
+					<a href={`${import.meta.env.BASE_URL}/projetos/projeto-5`} class="projeto-card block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500" data-tags="java maven web scrum ci/cd testes trello csv pdf graficos budget relatorios engenharia de software financeiro controle gastos">
 						<h3 class="text-xl font-semibold mb-3 text-primary-100">SistemaControleFinancas</h3>
 						<p class="text-primary-200 mb-4">Aplicação web desenvolvida para controle financeiro pessoal, integrando práticas de engenharia de software, SCRUM, CI/CD, testes e diversas funcionalidades como relatórios em PDF, gráficos ao vivo, autenticação e suporte a múltiplas moedas. Projeto acadêmico realizado na UFF.</p>
 						<div class="flex gap-2 mb-4 flex-wrap">
@@ -109,7 +109,7 @@ import awsBadge from '../assets/aws-certified-cloud-practitioner.png';
 						</div>
 					</a>
 
-					<a href="/projetos/projeto-6" class="projeto-card block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500" data-tags="node.js docker aws ec2 s3 api swaggerui rss noticias equipe">
+					<a href={`${import.meta.env.BASE_URL}/projetos/projeto-6`} class="projeto-card block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500" data-tags="node.js docker aws ec2 s3 api swaggerui rss noticias equipe">
 						<h3 class="text-xl font-semibold mb-3 text-primary-100">Leitor de RSS em Docker na AWS</h3>
 						<p class="text-primary-200 mb-4">Projeto de estágio para construção de um leitor de RSS containerizado em Docker, hospedado na AWS, com API em Node.js, rotas documentadas no Swagger UI e site estático em S3 para exibição de notícias.</p>
 						<div class="flex gap-2 mb-4 flex-wrap">
@@ -126,7 +126,7 @@ import awsBadge from '../assets/aws-certified-cloud-practitioner.png';
 						</div>
 					</a>
 
-					<a href="/projetos/projeto-7" class="projeto-card block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500" data-tags="python selenium apis youtube tiktok instagram x twitter automacao testes postagens">
+					<a href={`${import.meta.env.BASE_URL}/projetos/projeto-7`} class="projeto-card block bg-dark-800/50 backdrop-blur-sm rounded-lg p-6 hover:bg-dark-800 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary-500" data-tags="python selenium apis youtube tiktok instagram x twitter automacao testes postagens">
 						<h3 class="text-xl font-semibold mb-3 text-primary-100">Automação de Postagens em Redes Sociais</h3>
 						<p class="text-primary-200 mb-4">Projeto pessoal em Python e Selenium para automatizar postagens de vídeos em múltiplas redes sociais. Inclui tentativas de integração com APIs oficiais e soluções para contornar restrições das plataformas.</p>
 						<div class="flex gap-2 mb-4 flex-wrap">

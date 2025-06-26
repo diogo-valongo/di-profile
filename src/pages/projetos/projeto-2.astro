@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import awsArch from '../../assets/aws.drawio.png';
 ---
-<a href="/" class="fixed top-6 left-6 z-50 text-secondary-500 hover:text-secondary-300 transition-colors duration-200" title="Voltar">
+<a href={`${import.meta.env.BASE_URL}/`} class="fixed top-6 left-6 z-50 text-secondary-500 hover:text-secondary-300 transition-colors duration-200" title="Voltar">
   <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
     <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
   </svg>
@@ -15,7 +15,7 @@ import awsArch from '../../assets/aws.drawio.png';
         <p class="text-primary-200 mb-8">
           Este projeto foi desenvolvido durante meu estágio na Compass UOL e tem como objetivo automatizar a extração de informações relevantes de notas fiscais por meio de uma <b class="text-secondary-500">API REST</b>. A solução, desenvolvida em <b class="text-secondary-500">Python</b>, recebe imagens de notas fiscais, realiza a extração dos dados utilizando <b class="text-secondary-500">OCR do Amazon Textract</b> e aplica técnicas de <b class="text-secondary-500">NLP</b> para tratar e estruturar os campos extraídos, retornando-os em formato <b class="text-secondary-500">JSON</b>.<br/><br/>
           O desenvolvimento foi realizado em equipe (4 pessoas), com colaboração ativa e compartilhamento de conhecimento entre todos os membros, garantindo domínio sobre todas as etapas do projeto.<br/><br/>
-          Diferentemente do <a href="/projetos/projeto-1" class="text-secondary-500 underline hover:text-secondary-400 transition-colors">projeto do ChatBot</a>, neste optamos por provisionar manualmente todos os recursos na <b class="text-secondary-500">AWS</b>, pois ainda não havíamos sido apresentados ao <b class="text-secondary-500">Terraform</b> ou outras ferramentas de <b class="text-secondary-500">IaC</b>.<br/><br/>
+          Diferentemente do <a href={`${import.meta.env.BASE_URL}/projetos/projeto-1`} class="text-secondary-500 underline hover:text-secondary-400 transition-colors">projeto do ChatBot</a>, neste optamos por provisionar manualmente todos os recursos na <b class="text-secondary-500">AWS</b>, pois ainda não havíamos sido apresentados ao <b class="text-secondary-500">Terraform</b> ou outras ferramentas de <b class="text-secondary-500">IaC</b>.<br/><br/>
           <b>Principais tecnologias e serviços utilizados:</b>
           <ul class="list-disc ml-8 my-2 text-primary-300">
             <li><b class="text-secondary-500">API Gateway</b>: expõe a API REST e encaminha as requisições para a Lambda.</li>
@@ -53,7 +53,7 @@ import awsArch from '../../assets/aws.drawio.png';
           <span class="bg-primary-500/20 text-primary-100 text-sm px-3 py-1 rounded-full">JSON</span>
           <span class="bg-secondary-500/20 text-secondary-100 text-sm px-3 py-1 rounded-full">Python</span>
         </div>
-        <a href="/" class="text-secondary-400 hover:underline">← Voltar para o portfólio</a>
+        <a href={`${import.meta.env.BASE_URL}/`} class="text-secondary-400 hover:underline">← Voltar para o portfólio</a>
       </div>
     </section>
   </main>
